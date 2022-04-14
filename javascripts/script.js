@@ -335,6 +335,13 @@ class Front {
         document.getElementById(playerNumber).style.left = "40%"
         document.getElementById(playerNumber).style.height = "70vh"
     }
+    cancelDeal = () => {
+        for (let i = 0; i < players.length; i++) {
+            if (players[i].status === "loser") {
+                document.getElementById(`${i}`).style.opacity = "50%"
+            }
+        }
+    }
 }
 //--Fin des classes games--
 
@@ -349,6 +356,7 @@ document.getElementById("character-menu").addEventListener("click", function(pla
     console.log("--- The Game Start ! ---")
     while(play.newTurn()){
         console.log(`It's turn ${11 - play.turnLeft}`)
+        front.cancelDeal()
     }
     watchStats()
 })
