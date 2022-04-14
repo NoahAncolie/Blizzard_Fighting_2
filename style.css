@@ -1,0 +1,67 @@
+* {
+    padding : 0;
+    margin : 0;
+}
+
+body {
+    background-image : url('./images/blizzard.jpg');
+    background-position : bottom;
+    background-size : cover;
+    background-repeat: no-repeat;
+    height : 100vh;
+    overflow : hidden;
+}
+
+.display-stats {
+    position : fixed;
+}
+
+.character-menu {
+    display : flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.character {
+    height : 40vh;
+    border : 2px solid lightseagreen;
+    background-color: rgba(104, 106, 107, 0.501);
+}
+
+.character-fight img{
+    height : 40vh;
+}
+
+.character img {
+    height : 40vh;
+}
+
+.attack-anim {
+    animation: attack 0.5s infinite;
+}
+
+@keyframes attack {
+    0% {transform : translateX(5px)}
+    50% {transform : translateX(-5px)}
+    100% {transform : translateX(5px)}
+}
+
+.damage-anim {
+    animation: damage 0.5s infinite;
+}
+
+@keyframes dammage {
+    0% {opacity: 100%;}
+    50% {opacity: 50%;}
+    100% {opacity: 100%}
+}
+
+.display-stats {
+    background-color: rgba(255, 255, 255, 0.563);
+}
+
+.hp {
+    position : fixed;
+    top : 45vh;
+    left : 0;
+}

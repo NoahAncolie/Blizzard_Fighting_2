@@ -14,3 +14,5 @@ let player1 = new Joueur("Babar", "1998")
 
 player1.name
 player1.age()
+
+export default blablabla
